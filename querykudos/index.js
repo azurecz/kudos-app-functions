@@ -1,4 +1,7 @@
 module.exports = function (context, req) {
+    // Read kudos from Cosmos DB
+    // Filter based on query string giver, receiver or both
+    
     context.log('Received querykudos request');
 
     var kudos=[
@@ -27,6 +30,7 @@ module.exports = function (context, req) {
     ]
 
     context.res = {
+        status: 200,
         body: kudos
     };
 
