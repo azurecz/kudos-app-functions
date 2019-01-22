@@ -1,5 +1,6 @@
 module.exports = function (context, req) {
-    // Give kudos and write it Cosmos DB
+    // Update kudos and update it in Cosmos DB
+    // Kudos id is in path attribute (context.bindingData.id)
     // Input JSON string:
     // {
     //     "giver": "user1",
@@ -21,17 +22,17 @@ module.exports = function (context, req) {
     //     }
     // }
     
-    context.log('Received givekudos request');
+    context.log('Received querykudos request');
 
     var kudos={
-        "id": 1,
+        "id": context.bindingData.id,
         "giver": "user1",
         "receiver": "user2",
         "category": "Helping others",
         "description": "Kudos for helping me setting up my pc",
         "link": {
             "rel": "kudos",
-            "href": "/kudos/1"
+            "href": "/kudos/"+context.bindingData.id
         }
     }
 

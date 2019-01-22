@@ -2,7 +2,7 @@ module.exports = function (context, req) {
     // Read kudos from Cosmos DB
     // Filter based on query string giver, receiver or both
     
-    context.log('Received querykudos request');
+    context.log('Received givekudos request');
 
     var kudos=[
         {
@@ -13,7 +13,7 @@ module.exports = function (context, req) {
             "description": "Kudos for helping me setting up my pc",
             "link": {
                 "rel": "kudos",
-                "href": "./kudos/1"
+                "href": "/kudos/1"
             }
         },
         {
@@ -24,7 +24,7 @@ module.exports = function (context, req) {
             "description": "Kudos for helping me setting up my phone",
             "link": {
                 "rel": "kudos",
-                "href": "./kudos/2"
+                "href": "/kudos/2"
             }
         }
     ]
