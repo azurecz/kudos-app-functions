@@ -5,7 +5,8 @@ module.exports = function (context, req) {
     context.log('Received deletekudos request');
 
     context.res = {
-        status: 204
+        status: 204,
+        body: ""
     };
 
     context.done();

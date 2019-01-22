@@ -9,7 +9,7 @@
         "methods": [
           "put"
         ],
-        "route": "/{id:int?}"
+        "route": "{id:int?}"
       },
       {
         "type": "http",
