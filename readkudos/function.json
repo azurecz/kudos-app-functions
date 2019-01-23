@@ -9,7 +9,7 @@
         "methods": [
           "get"
         ],
-        "route": "readkudos/{id:int?}"
+        "route": "readkudos/{id}"
       },
       {
         "type": "http",
