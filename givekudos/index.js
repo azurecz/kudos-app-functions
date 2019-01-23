@@ -10,28 +10,28 @@ module.exports = function (context, req) {
 
     // Return result with id and HATEOAS link
     // {
-    //     "id": 1,
+    //     "id": 348e93ca-2bf9-47ac-bc31-ff39fbbf9feb,
     //     "giver": "user1",
     //     "receiver": "user2",
     //     "category": "Helping others",
     //     "description": "Kudos for helping me setting up my pc",
     //     "link": {
     //         "rel": "kudos",
-    //         "href": "/kudos/1"
+    //         "href": "/kudos/348e93ca-2bf9-47ac-bc31-ff39fbbf9feb"
     //     }
     // }
     
     context.log('Received givekudos request');
 
     var kudos={
-        "id": 1,
+        "id": "348e93ca-2bf9-47ac-bc31-ff39fbbf9feb",
         "giver": "user1",
         "receiver": "user2",
         "category": "Helping others",
         "description": "Kudos for helping me setting up my pc",
         "link": {
             "rel": "kudos",
-            "href": "/kudos/1"
+            "href": "/kudos/348e93ca-2bf9-47ac-bc31-ff39fbbf9feb"
         }
     }
 
