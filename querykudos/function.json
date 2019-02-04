@@ -1,20 +1,29 @@
 {
-    "disabled": false,
-    "bindings": [
-      {
-        "authLevel": "function",
-        "type": "httpTrigger",
-        "direction": "in",
-        "name": "req",
-        "methods": [
-          "get"
-        ]
-      },
-      {
-        "type": "http",
-        "direction": "out",
-        "name": "res"
-      }
-    ]
-  }
-  
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "documentDB",
+      "name": "inputDocument",
+      "databaseName": "kudos",
+      "collectionName": "kudos",
+      "partitionKey": "/reciever",
+      "sqlQuery": "SELECT * FROM c",
+      "connection": "kudos_COSMOSDB",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}

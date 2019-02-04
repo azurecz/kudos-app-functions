@@ -17,10 +17,12 @@ module.exports = function (context, req) {
 
     var users=[
         {
+            "id": "1",
             "username": "mnovak",
             "fullname": "Martin Novak"
         },
         {
+            "id": "2",
             "username": "jmikula",
             "fullname": "Jan Mikula"
         }

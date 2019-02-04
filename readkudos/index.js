@@ -1,38 +1,16 @@
 module.exports = function (context, req) {
-    // Read single kudos
-    // Kudos id is in path attribute (context.bindingData.id)
-
-    // Return result with id and HATEOAS link
-    // {
-    //     "id": 1,
-    //     "giver": "user1",
-    //     "receiver": "user2",
-    //     "category": "Helping others",
-    //     "description": "Kudos for helping me setting up my pc",
-    //     "link": {
-    //         "rel": "kudos",
-    //         "href": "/kudos/1"
-    //     }
-    // }
+    context.log('JavaScript HTTP trigger function processed a request.');
     
-    context.log('Received querykudos request');
+        var doc = context.bindings.inputDocument
+        context.log('doc: ', doc);
+        context.log('document: ', doc);
+        context.res =  {
+            // status: 200, /* Defaults to 200 */
+            body: doc,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        context.done();
 
-    var kudos={
-        "id": context.bindingData.id,
-        "giver": "user1",
-        "receiver": "user2",
-        "category": "Helping others",
-        "description": "Kudos for helping me setting up my pc",
-        "link": {
-            "rel": "kudos",
-            "href": "/kudos/"+context.bindingData.id
-        }
-    }
-
-    context.res = {
-        status: 200,
-        body: kudos
-    };
-
-    context.done();
 };
